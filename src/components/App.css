@@ -1,6 +1,18 @@
 
 
-.titulos{
-    background-color: blue;
-    color:aqua
+
+.icon{
+    font-size: 40px;
+    color: aliceblue;
+
+}
+.logo{
+
+width: 60px;
+
+
+}
+.titulo{
+
+    color:aliceblue;
 }
