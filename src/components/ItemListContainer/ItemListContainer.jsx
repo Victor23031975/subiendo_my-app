@@ -1,16 +1,21 @@
 import React from 'react';
 
-const ItemListContainer = (props) => {
+
+
+
+export const ItemListContainer = ({title,subtitle}) => {
 
     
     return (
         <>
-            <h3>{props.tittle}</h3>
+           
+         <h3>{title}</h3>    
+         <h3>{subtitle}</h3>  
         </>
     );
 }
 
-export default ItemListContainer;
+
 
 
 

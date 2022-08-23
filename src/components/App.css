@@ -3,16 +3,21 @@
 
 .icon{
     font-size: 40px;
-    color: aliceblue;
+    color:aliceblue;
 
 }
 .logo{
 
-width: 60px;
+width: 50px;
 
 
 }
-.titulo{
 
-    color:aliceblue;
+.nav-link{
+color: aliceblue;
+
+
+}
+.nav-item :hover{
+    color: white;
 }
