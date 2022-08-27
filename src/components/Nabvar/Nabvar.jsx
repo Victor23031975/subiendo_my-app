@@ -5,7 +5,14 @@ import Form from '../Form/Form'
 import ItemListContainer from '../ItemListContainer/ItemListContainer';
 import CartWidget from './CartWidget/CartWidget';
 import { BiCart } from 'react-icons/bi';
-const Nav = () => {
+const Nav = ({cont}) => {
+
+
+
+
+
+
+
     return (
             <>
             <nav className="navbar navbar-expand-lg navbar-primary bg-primary">
@@ -22,7 +29,7 @@ const Nav = () => {
                         </li>
                         <li className="nav-item">
                         <a className="nav-link" href="#">PRODUCTOS</a>
-                        </li>
+                        </li>   
                     </ul>
 
 
@@ -32,7 +39,8 @@ const Nav = () => {
 
                 </div>
                      
-                 <BiCart  className='icon'/>
+                 <span style={{color:"white"}}><BiCart  className='icon'/>{cont}</span>
+
                 </div>
                 
             </nav>
