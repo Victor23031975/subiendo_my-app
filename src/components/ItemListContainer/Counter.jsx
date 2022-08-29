@@ -7,34 +7,25 @@ import {React,useState} from 'react'
  function Counter({stock,onAdd}) {
 
 
-        const [cont,setCont] = useState(1);
+        const [cont,setCont] = useState(0);
 
 
-        function contador (operacion){
+        function agregar (){
+            if (cont<stock){setCont(cont+1)}
             
-            if (operacion=="+"&& cont<stock){
-  
-            setCont(cont+1)
             
-          
-            } 
         
-            else if(operacion=='Borrar'){
-  
-            setCont(cont==-1)
-  
-            }
-  
-  
-            else {
-                setCont(cont-1)
-  
-                if (cont<=0){
-  
-                setCont(cont==-1)
-                 }
-                }
+        }
 
+        function quitar (){
+
+            if(cont>0){setCont(cont-1)}
+            
+        }
+
+        function reset (){
+
+            setCont(0)
         }
     
     return (
@@ -47,17 +38,20 @@ import {React,useState} from 'react'
     
            
         
-            <div className="card text-white bg-dark mt-5 mb-3" style={{maxWidth: '25rem'}}>
+            <div className="card text-white bg-dark m-5 mb-3 container d-flex justify-content-center border-primary" style={{maxWidth: '25rem'}}>
             
-                <div className="card-body">
-                <h3 className="card-title">Counter:</h3>
+                <div className="card-body ">
+                <h3 className="card-title d-flex justify-content-center">Counter:</h3>
 
-                <p className="card-text">Cantidad:{cont}  Stock:{stock}</p>
-           
-                <button type="button" className="btn btn-primary"onClick={ ()=>contador("+")}>SUMAR</button>
-                <button type="button" className="btn btn-dark" onClick={ ()=>contador("Borrar")}>BORRAR</button>
-                <button type="button" className="btn btn-primary"onClick={ ()=>contador("-")}>RESTAR</button>
-                <button type="button" className="btn btn-dark"onClick={()=>onAdd (cont)}>Confirmar</button>
+                <p className="card-text d-flex justify-content-center">Cantidad:  {cont}  Stock:  {stock}</p>
+                <div className=" d-flex justify-content-center">
+                <button  className="btn btn-primary m-1"onClick={ agregar}>+</button>
+                <button  className="btn btn-primary m-1" onClick={ reset}>BORRAR</button>
+                <button  className="btn btn-primary m-1"onClick={ quitar}>-</button>
+                <button  className="btn btn-primary m-1 "onClick={()=>onAdd (cont)}>Confirmar</button>
+                </div >
+
+                
             </div>
             
 

@@ -17,7 +17,7 @@ const Nav = ({cont}) => {
             <>
             <nav className="navbar navbar-expand-lg navbar-primary bg-primary">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#"><img  src="/asset/logo.png  " alt="logo" className='logo'/></a>
+                    <a className="navbar-brand" href="#"><img  src="logo.png  " alt="logo" className='logo'/></a>
                   
                 <div className="collapse navbar-collapse"       id="navbarColor0"> 
                     <ul className="navbar-nav me-auto">

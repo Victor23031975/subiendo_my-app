@@ -1,9 +1,12 @@
 import React from 'react';
 import Counter from './Counter'
+import Productos from '../Productos/Productos'
+import { BiLibrary } from 'react-icons/bi';
 
 
+const ItemListContainer = () => {
 
-const ItemListContainer = ({title,subtitle}) => {
+  
 
     function onAdd(cont){
        
@@ -13,10 +16,8 @@ const ItemListContainer = ({title,subtitle}) => {
     
     return (
         <>
-            <h3>{title}</h3>    
-            <h3>{subtitle}</h3> 
-            <Counter stock={5} onAdd={onAdd}/>  
-          
+            <Counter stock={10} onAdd={onAdd}/>  
+            
         </>
     );
 }

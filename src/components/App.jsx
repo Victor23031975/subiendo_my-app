@@ -3,8 +3,9 @@ import React from 'react';
 import Nav from './Nabvar/Nabvar';
 import ItemListContainer from './ItemListContainer/ItemListContainer';
 import CartWidget from './Nabvar/CartWidget/CartWidget'
+import Productos from './Productos/Productos';
 
-function App({nombre}) {
+function App() {
 
 
 
@@ -14,10 +15,11 @@ function App({nombre}) {
 
       
       <Nav />
-      <ItemListContainer title="Casa Lopez" subtitle= "productos"/>
+      <ItemListContainer/>
       <CartWidget/>
+      <Productos/>
      
-
+  
 
 
      
