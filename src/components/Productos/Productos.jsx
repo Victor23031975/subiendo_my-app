@@ -1,4 +1,4 @@
-import {React,useState } from 'react';
+import React from 'react';
 import imagen1 from '../asset/img/imagen1.webp'
 import imagen2 from '../asset/img/imagen2.webp'
 import imagen3 from '../asset/img/imagen3.webp'
@@ -9,7 +9,7 @@ import imagen7 from '../asset/img/imagen7.webp'
 import imagen8 from '../asset/img/imagen8.webp'
 import imagen9 from '../asset/img/imagen9.webp'
 
-     const productos=[
+     const ListaProductos=[
        
 
     {name:"DV CATENA", precio: 10000, imagen:imagen3,stock: 10
@@ -47,6 +47,8 @@ import imagen9 from '../asset/img/imagen9.webp'
     }
     ]
 
+    /*
+
     function consultarPromesa(confirmacion){
 
     
@@ -73,7 +75,7 @@ const Productos = () => {
 
     const [productos,setProductos] = useState ([])
 
- 
+        
 
         consultarPromesa(true)
         
@@ -112,9 +114,11 @@ const Productos = () => {
         </div>
         </div>
     );
-}
 
-export default Productos;
+    
+}
+*/
+export default ListaProductos;
 
 
 

@@ -2,8 +2,8 @@ import './App.css';
 import React from 'react';
 import Nav from './Nabvar/Nabvar';
 import ItemListContainer from './ItemListContainer/ItemListContainer';
-import CartWidget from './Nabvar/CartWidget/CartWidget'
-import Productos from './Productos/Productos';
+import CartWidget from './Nabvar/CartWidget/CartWidget' 
+
 
 function App() {
 
@@ -17,8 +17,9 @@ function App() {
       <Nav />
       <ItemListContainer/>
       <CartWidget/>
-      <Productos/>
+      
      
+      
   
 
 
