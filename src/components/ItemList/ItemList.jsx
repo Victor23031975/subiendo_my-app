@@ -1,6 +1,7 @@
 
     import React  from 'react'
     import Item from '../Item/Item'
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer'
 
 
 const ItemList = ({list}) => {
@@ -20,7 +21,8 @@ return (
 
 
      
-        <Item productos={productos} key={indice}/>
+        <Item productos={productos} key={indice}/>,
+       
 
     
 

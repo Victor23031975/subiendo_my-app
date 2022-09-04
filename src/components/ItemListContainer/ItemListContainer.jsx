@@ -12,6 +12,8 @@ const ItemListContainer = () => {
     useEffect(() => {
         
         const getListaProductos= new Promise((resolve, reject) => {
+
+            
             setTimeout(() => {
                 resolve(ListaProductos)
             }, 2000);
@@ -27,14 +29,15 @@ const ItemListContainer = () => {
 
    
     function onAdd(cont){
+
        
-       console.log(`Se seleccionaron ${cont} productos`)
+       
 
     }
     
     return (
         <>
-            <Counter stock={10} onAdd={onAdd}/>  
+           
             <ItemList list= {productos}/>
             
         </> 
