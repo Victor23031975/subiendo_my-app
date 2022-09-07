@@ -1,0 +1,48 @@
+
+
+      [
+       
+
+        {"name":"DV CATENA","precio": 3400, "imagen":"imagen3.webp", "stock": 10,"id":1, "descripcion":"Vino Dv Catena Malbec- Malbec 750ml.", "comentario":"Es un blend de Malbec de dos diferentes viñedos: Angélica y La Pirámide.", "categoria":"vinos"
+        
+        },
+        
+        {"name":"ANGELICA ZAPATA", "precio": 7700,"imagen": "imagen4.webp","stock": 10, "id":2, "descripcion":"Vino Angelica Zapata Malbec Alta 750 ml.", "categoria":"vinos"
+        
+        
+        },
+         
+        {"name":"SALENTEIN", "precio": 7600, "imagen": "imagen5.webp","stock": 10, "id":3,"descripcion": "Vino Salentein Primus Malbec 750ml. - Valle De Uco", "categoria":"vinos"
+       
+    
+        
+        
+        },
+        
+        {"name":"MACALLAN", "precio": 35900, "imagen":"imagen7.webp","stock": 10, "id":4, "descripcion":"Whisky The Macallan 12 Años Triple Cask Matured 700ml.", "categoria":"BebidasBlancas" 
+    
+        
+        },
+        
+        {"name":"JW, Black Label", "precio": 8399, "imagen":"imagen8.webp","stock": 10,"id":5,"descripcion":"Whisky Johnnie Walker Black X 1 Litro ", "categoria":"BebidasBlancas" 
+        
+        },
+        
+        {"name":"Clynelish 14", "precio": 17850, "imagen":"imagen9.webp","stock": 10 ,"id":6,"descripcion":"Whisky Clynelish Distillery 14 Años", "categoria":"BebidasBlancas"
+        
+        },
+
+        {"name":"Malaria Gin", "precio": 5699, "imagen":"imagen1.webp","stock": 10,"id":7, "descripcion":"Gin Malaria Premium 700ml. - Nacional", "categoria":"BebidasBlancas"
+        
+        },
+        
+        {"name":"Ron, Santa Teresa", "precio": 7099, "imagen":"imagen2.webp","stock": 10 ,"id":8, "descripcion": "Ron Santa Teresa Gran Reserva 750ml.", "categoria":"BebidasBlancas"
+        
+        },
+        {"name":"Vodka Beluga", "precio": 11299, "imagen":"imagen6.webp","stock": 10, "id":9
+        , "descripcion":"Vodka Beluga Noble 700ml.", "categoria":"BebidasBlancas"}
+
+
+
+        ]
+    

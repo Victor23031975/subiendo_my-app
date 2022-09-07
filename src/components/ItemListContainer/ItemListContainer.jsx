@@ -1,51 +1,62 @@
 import React,{useState,useEffect } from 'react';
 import Counter from './Counter'
-import ListaProductos from '../Productos/Productos'
 import { BiLibrary } from 'react-icons/bi';
 import ItemList from '../ItemList/ItemList';
-
+import{Link} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
 
-    const [productos,setProductos] = useState ([])
 
-    useEffect(() => {
-        
-        const getListaProductos= new Promise((resolve, reject) => {
-
-            
-            setTimeout(() => {
-                resolve(ListaProductos)
-            }, 2000);
-        })
-
-        getListaProductos
-        .then ((response)=>setProductos(response))
-
-       
-    }, []);
-
-
-
-   
     function onAdd(cont){
 
-       
+    }
+
+
+
+const [productos,setProductos] = useState ([]);
+
+const {categoria}= useParams()
+
+console.log (categoria)
+useEffect (()=>{
+
+
+fetch ("./Json/productos.json")
+.then (response => response.json())
+
+.then (data=>setProductos(data))
+
+
+
+},[categoria]);
+
+
+
+
+return (
+    <>
        
 
-    }
-    
-    return (
-        <>
-           
-            <ItemList list= {productos}/>
-            
-        </> 
-    );
+            <ItemList list= {productos} />
+
+       
+        
+        
+    </> 
+);
+
+
+
 }
 
+
+
+
+
+
+
+
+
+
 export default ItemListContainer
-
-
-
-

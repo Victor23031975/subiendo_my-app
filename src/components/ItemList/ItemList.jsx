@@ -1,7 +1,7 @@
 
     import React  from 'react'
     import Item from '../Item/Item'
-import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer'
+    import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer'
 
 
 const ItemList = ({list}) => {
@@ -16,17 +16,7 @@ return (
 
 
   
-    { list.map ((productos,indice) =>
-
-
-
-     
-        <Item productos={productos} key={indice}/>,
-       
-
-    
-
-
+    { list.map ((producto,indice) =><Item producto={producto} key={indice}/>,
 
 
    )}
@@ -43,6 +33,7 @@ return (
 
 
 export default ItemList 
+
 
 
 
