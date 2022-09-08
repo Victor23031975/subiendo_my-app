@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
    const[producto,setProductoCard] =useState([])
 
    const {id}= useParams()
-   
+   console.log(id)
 
    useEffect(()=>{
     
@@ -24,7 +24,7 @@ const ItemDetailContainer = () => {
         
         setProductoCard(producto1)
 
-
+        
 
     })
        

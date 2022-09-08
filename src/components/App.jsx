@@ -19,7 +19,7 @@ const App= () =>{
       <Nav />
       <Routes>
       <Route  path="/" element= {<ItemListContainer/>}></Route>
-      <Route  path="/categoria/:categoria" element= {<ItemDetailContainer/>}></Route>
+      <Route  path="/ItemListContainer/:categoria" element= {<ItemListContainer/>}></Route>
       <Route  path="/ItemDetailContainer/:id" element={<ItemDetailContainer/>}></Route>
       </Routes>
       </BrowserRouter>

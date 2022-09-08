@@ -25,14 +25,14 @@ const Nav = ({cont}) => {
                                 <a className="nav-link" href="#">CASA LOPEZ</a>
                             </li>
                             </Link>    
-                            <Link to='/categoria/:vinos'>    
+                            <Link to='/ItemListContainer/vinos'>    
                             <li className="nav-item">
-                                <a className="nav-link" href="#">NOSOTROS</a>
+                                <a className="nav-link" href="#">VINOS</a>
                             </li>
                             </Link>
-                            <Link to='/'>
+                            <Link to='ItemListContainer/BebidasBlancas'>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">PRODUCTOS</a>
+                                <a className="nav-link" href="#">BEBIDAS BLANCAS</a>
                             </li> 
                             </Link>
 

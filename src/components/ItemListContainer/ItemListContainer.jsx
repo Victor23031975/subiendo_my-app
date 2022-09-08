@@ -18,14 +18,27 @@ const [productos,setProductos] = useState ([]);
 
 const {categoria}= useParams()
 
-console.log (categoria)
+
 useEffect (()=>{
 
 
-fetch ("./Json/productos.json")
+fetch ("../Json/productos.json")
 .then (response => response.json())
 
-.then (data=>setProductos(data))
+.then ((data)=> {if (categoria)
+    
+     { const productoF= data.filter(item=> item.categoria === categoria) 
+    setProductos(productoF)
+    
+    }
+
+
+    else{ setProductos(data)}
+    
+    
+ } )
+    
+    
 
 
 
