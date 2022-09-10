@@ -1,62 +1,133 @@
 import {React,useState} from 'react';
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 
 
 
+const Counter= ({producto}) =>{
+
+const[cantidad,setCantidad] =useState(1) 
+
+function agregarCarrito (producto,cantidad) {
+
+  const productoCarrito= {id:producto.id, cantidad:cantidad}
+
+  console.log(productoCarrito)
+
+ }
 
 
+const limiteCantidad = (operacion) => {
+
+    if (operacion== "+") {
+
+      if (cantidad < producto.stock){
+
+          setCantidad (cantidad+1)
+      }
+    } 
+
+    else{
 
 
-    function Counter({stock,onAdd}) {
-        
+      if (cantidad>1) {
 
-        const [cont,setCont] = useState(1);
-        
-        function agregar (){
-            if (cont<stock) {setCont(cont+1)}
-            
-        }
+          setCantidad (cantidad-1)
+      }
 
-        function quitar (){
+    }
 
-            if(cont>1){setCont(cont-1)}
-            
-        }
+  }
 
-        function reset (){
-
-            setCont(1)
-        }
-
-       
+  
     
     return (
     
-    <>
-
-        <div className="card text-white bg-dark m-5 mb-3 container d-flex justify-content-center border-primary" style={{maxWidth: '25rem'}}>
-            
-            <div className="card-body  ">
-                <h3 className="card-title ">Counter:</h3>
-                <p className="card-text d-flex justify-content-center">Cantidad:  {cont}  Stock:  {stock}</p>
-                <div className=" d-flex justify-content-center">
-                    <button  className="btn btn-primary m-1"onClick={ agregar}>+</button>
-                    <button  className="btn btn-primary m-1" onClick={ reset}>BORRAR</button>
-                    <button  className="btn btn-primary m-1"onClick={ quitar}>-</button>    
-                    <button  className="btn btn-primary m-1 "onClick={()=>onAdd (cont)}>AGREGAR</button>
-                   
-                </div > 
-
+    
+    <div className="card-body  ">
+            <button className='btn btn-dark' onClick={()=> limiteCantidad("+")} >+</button>
+                    <button className='btn btn-dark' onClick={()=> limiteCantidad ("-")}>-</button>   
+                    <p>{cantidad}</p>
                 
-            </div>
-            
-              
+                    <button className='btn btn-dark' onClick= {()=>agregarCarrito(producto,cantidad) }>COMPRAR</button>
 
+    </div>
 
-        </div>
-       
-
-    </>
   )}
 
 
 export default Counter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+<div className="card text-white bg-dark m-5 mb-3 container d-flex justify-content-center border-primary" style={{maxWidth: '25rem'}}>
+            
+<div className="card-body  ">
+    <h3 className="card-title ">Counter:</h3>
+    <p className="card-text d-flex justify-content-center">Cantidad:  {cont}  Stock:  {stock}</p>
+    <div className=" d-flex justify-content-center">
+        <button  className="btn btn-primary m-1"onClick={ agregar}>+</button>
+        <button  className="btn btn-primary m-1" onClick={ reset}>BORRAR</button>
+        <button  className="btn btn-primary m-1"onClick={ quitar}>-</button>    
+        <button  className="btn btn-primary m-1 "onClick={()=>onAdd (cont)}>AGREGAR</button>
+       
+    </div > 
+
+    
+</div>
+
+  
+
+
+</div>
+
+
+*/
+
+/*
+function Counter({stock,onAdd}) {
+        
+
+    const [cont,setCont] = useState(1);
+    
+    function agregar (){
+        if (cont<stock) {setCont(cont+1)}
+        
+    }
+
+    function quitar (){
+
+        if(cont>1){setCont(cont-1)}
+        
+    }
+
+    function reset (){
+
+        setCont(1)
+    }
+    */
