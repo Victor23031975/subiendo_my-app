@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Form from '../Form/Form';
-import ItemListContainer from '../ItemListContainer/ItemListContainer';
 import { BiCart } from 'react-icons/bi';
 import{Link} from 'react-router-dom'
 
@@ -25,12 +24,12 @@ const Nav = ({cont}) => {
                                 <a className="nav-link" href="#">CASA LOPEZ</a>
                             </li>
                             </Link>    
-                            <Link to='/ItemListContainer/vinos'>    
+                            <Link to='/categoria/vinos'>    
                             <li className="nav-item">
                                 <a className="nav-link" href="#">VINOS</a>
                             </li>
                             </Link>
-                            <Link to='ItemListContainer/BebidasBlancas'>
+                            <Link to='categoria/BebidasBlancas'>
                             <li className="nav-item">
                                 <a className="nav-link" href="#">BEBIDAS BLANCAS</a>
                             </li> 

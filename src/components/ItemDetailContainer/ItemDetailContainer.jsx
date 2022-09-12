@@ -1,8 +1,8 @@
 import React,{useState,useEffect } from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
-import ItemListContainer from '../ItemListContainer/ItemListContainer';
 import { useParams } from 'react-router-dom';
-import Counter from '../ItemListContainer/Counter';
+import Counter from '../counter/Counter';
+
 
 
 const ItemDetailContainer = () => {
@@ -24,15 +24,9 @@ const ItemDetailContainer = () => {
         
         setProductoCard(producto1)
 
-        
-
     })
-       
-    
 
    },[])
-
-
 
 
 
@@ -44,7 +38,7 @@ return(
     <div className='row'>
         
        <ItemDetail producto={producto}/>
-   
+      
     </div>
 
 

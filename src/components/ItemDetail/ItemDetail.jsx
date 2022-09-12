@@ -1,11 +1,22 @@
-import React,{useState,useEffect } from 'react';
+import {React,useState} from 'react';
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer'
-import Counter from '../ItemListContainer/Counter';
+import Counter from '../counter/Counter';
 
 
 
   const ItemDetail=  ({producto})=>{
+
     
+
+
+
+    function agregarCarrito (producto,cantidad) {
+    
+      const productoCarrito= {id:producto.id, cantidad:cantidad}
+    
+      console.log(productoCarrito)
+    
+    }
 
 
   return (
@@ -24,12 +35,12 @@ import Counter from '../ItemListContainer/Counter';
                     <p className="card-text">Stock :{producto.stock} unidades</p>
                     <p className="card-text"> {producto.descripcion}</p>
 
-                    <Counter producto={producto}/>
+                    <Counter producto={producto}  agregarCarrito={agregarCarrito}/>
                     
                 </div>
             </div>
         </div>
-        </div>
+        </div>  
     
   
     

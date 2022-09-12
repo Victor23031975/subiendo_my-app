@@ -1,28 +1,23 @@
 import {React,useState} from 'react';
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
+import ItemDetail from '../ItemDetail/ItemDetail';
+
+
+const Counter= ({producto,agregarCarrito,}) =>{
+
+  const[cantidad,setCantidad] =useState(1) 
 
 
 
-const Counter= ({producto}) =>{
-
-const[cantidad,setCantidad] =useState(1) 
-
-function agregarCarrito (producto,cantidad) {
-
-  const productoCarrito= {id:producto.id, cantidad:cantidad}
-
-  console.log(productoCarrito)
-
- }
 
 
 const limiteCantidad = (operacion) => {
 
-    if (operacion== "+") {
+  if (operacion== "+") {
 
-      if (cantidad < producto.stock){
+    if (cantidad < producto.stock){
 
-          setCantidad (cantidad+1)
+      setCantidad (cantidad+1)
       }
     } 
 
@@ -31,28 +26,31 @@ const limiteCantidad = (operacion) => {
 
       if (cantidad>1) {
 
-          setCantidad (cantidad-1)
+      setCantidad (cantidad-1)
+
       }
 
     }
-
   }
 
   
     
-    return (
+  return (
     
-    
+    <>
     <div className="card-body  ">
-            <button className='btn btn-dark' onClick={()=> limiteCantidad("+")} >+</button>
-                    <button className='btn btn-dark' onClick={()=> limiteCantidad ("-")}>-</button>   
-                    <p>{cantidad}</p>
-                
-                    <button className='btn btn-dark' onClick= {()=>agregarCarrito(producto,cantidad) }>COMPRAR</button>
 
+      <button className='btn btn-dark' onClick={()=> limiteCantidad("+")} >+</button>
+      <button className='btn btn-dark' onClick={()=> limiteCantidad ("-")}>-</button>   
+      <p>{cantidad}</p>
+      <button className='btn btn-dark' onClick= {()=>agregarCarrito(producto,cantidad) }>COMPRAR</button>
+     
     </div>
+  
+    </>
+  )
 
-  )}
+}
 
 
 export default Counter
